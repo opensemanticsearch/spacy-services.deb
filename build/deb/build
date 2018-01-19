@@ -18,6 +18,7 @@ BASEDIR="${BASEDIR}/../../"
 
 mkdir ${BUILDDIR}
 cp -a ${BASEDIR}/build/deb/${DEBIAN_VERSION}/* ${BUILDDIR}/
+cp -a ${BASEDIR}/etc ${BUILDDIR}/
 mkdir -p ${BUILDDIR}/usr/lib/python3/dist-packages/spacy-services
 cp -a ${BASEDIR}/src/spacy-services/* ${BUILDDIR}/usr/lib/python3/dist-packages/spacy-services/
 
