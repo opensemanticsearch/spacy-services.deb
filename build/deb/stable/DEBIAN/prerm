@@ -1,0 +1,5 @@
+#!/bin/sh
+
+service spacy stop
+
+exit 0
