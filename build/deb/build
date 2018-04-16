@@ -1,7 +1,7 @@
 #/bin/sh
 
 VERSION=`date +%y.%m.%d`
-PACKAGE=spacy-services_${VERSION}.deb
+PACKAGE=spacy-services.deb_${VERSION}.deb
 DEBIAN_VERSION=stable
 BUILDDIR=/tmp/spacy-$$.deb
 
@@ -19,6 +19,7 @@ BASEDIR="${BASEDIR}/../../"
 mkdir ${BUILDDIR}
 cp -a ${BASEDIR}/build/deb/${DEBIAN_VERSION}/* ${BUILDDIR}/
 cp -a ${BASEDIR}/etc ${BUILDDIR}/
+chown -R root:root ${BUILDDIR}/etc/
 mkdir -p ${BUILDDIR}/usr/lib/python3/dist-packages/spacy-services
 cp -a ${BASEDIR}/src/spacy-services/* ${BUILDDIR}/usr/lib/python3/dist-packages/spacy-services/
 
