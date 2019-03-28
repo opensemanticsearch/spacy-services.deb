@@ -5,12 +5,20 @@ adduser --system --disabled-password spacy
 # install SpaCy and download language specific models
 pip3 install -U spacy
 python3 -m spacy download en
+python3 -m spacy download en_core_web_md
+python3 -m spacy download en_core_web_lg
 python3 -m spacy download de
 python3 -m spacy download es
 python3 -m spacy download pt
 python3 -m spacy download fr
 python3 -m spacy download it
 python3 -m spacy download nl
+
+# dependencies for spacy-services
+pip3 install hug
+pip3 install hug-middleware-cors
+pip3 install waitress
+
 
 # start on boot
 update-rc.d spacy defaults
