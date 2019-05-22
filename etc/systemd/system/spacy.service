@@ -1,0 +1,12 @@
+[Unit]
+Description=Spacy Services
+After=network.target
+
+[Service]
+Type=simple
+User=spacy
+ExecStart=/usr/bin/python3 /usr/lib/python3/dist-packages/spacy-services/displacy/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
