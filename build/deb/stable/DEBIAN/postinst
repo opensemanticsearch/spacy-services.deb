@@ -1,23 +1,10 @@
 #!/bin/sh
 
+# install dependencies like SpaCy and language specific models
+pip3 install -r /usr/lib/python3/dist-packages/spacy-services/displacy/requirements.txt
+
+# daemon will run as separated user
 adduser --system --disabled-password spacy
-
-# install SpaCy and download language specific models
-pip3 install -U spacy
-python3 -m spacy download en
-#python3 -m spacy download en_core_web_md
-#python3 -m spacy download en_core_web_lg
-python3 -m spacy download de
-python3 -m spacy download es
-python3 -m spacy download pt
-python3 -m spacy download fr
-python3 -m spacy download it
-python3 -m spacy download nl
-
-# dependencies for spacy-services
-pip3 install hug
-pip3 install hug-middleware-cors
-pip3 install waitress
 
 # load our additional systemd service config
 systemctl daemon-reload
