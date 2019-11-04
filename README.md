@@ -18,7 +18,4 @@ or later
 
 git pull
 
-- Call the build script in the directory build
-
-cd build
-./build
+- Call the build script build-deb
