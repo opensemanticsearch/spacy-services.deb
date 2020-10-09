@@ -8,14 +8,4 @@ Resolving and downloading dependencies by apt and installs spaCy and language mo
 
 Build:
 
-- Clone / pull the git repository spacy-services to the directory src
-
-cd src
-
-git clone https://github.com/opensemanticsearch/spacy-services.git
-
-or later
-
-git pull
-
 - Call the build script build-deb

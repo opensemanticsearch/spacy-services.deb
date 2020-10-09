@@ -1,0 +1,3 @@
+[submodule "src/spacy-services"]
+	path = src/spacy-services
+	url = https://github.com/opensemanticsearch/spacy-services.git
