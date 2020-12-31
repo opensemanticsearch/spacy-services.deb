@@ -2,7 +2,7 @@
 
 # Upgrade pip if Linux release is Debian 10 (Debian Buster) so its Python package manager release too old to install spaCy
 LINUX_RELEASE=`lsb_release --short --code`
-if [[ "$LINUX_RELEASE" == "buster" ]]; then
+if [ "$LINUX_RELEASE" = "buster" ]; then
     echo "Upgrade the old Python package manager pip3 of Debian Buster to newer pip release which can install spaCy"
     pip3 install --upgrade pip
 fi
